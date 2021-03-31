@@ -1,0 +1,13 @@
+{
+  "name": "com.mattfavero.syrinj",
+  "displayName": "Syrinj",
+  "version": "1.5.0",
+  "unity": "2019.1",
+  "description": "Lightweight dependency injection & convenient attributes for Unity.",
+  "keywords": [
+    "Dependency Injection",
+    "syrinj"
+  ],
+  "license": "MIT",
+  "category": "DI"
+}
