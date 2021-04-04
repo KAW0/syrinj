@@ -39,14 +39,18 @@ namespace Syrinj
             attributeCache = new AttributeCache();
             Reset();
         }
-
+		static int counter;
         public void Reset()
         {
-            dependencyMap = new DependencyMap();
+            counter++;
+			if(counter>1)
+				Debug.LogError(nameof(DependencyContainer)+ " called more than once");
+			dependencyMap = new DependencyMap();
             memberEvaluator = new MemberEvaluator(attributeCache, dependencyMap);
-
             RegisterDefaultDependencyResolvers();
             GameObjectInjector.ResetVisited();
+			
+			
         }
 
         private void RegisterDefaultDependencyResolvers()
